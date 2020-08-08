@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <link id="favicon" rel="icon" href="https://avatars3.githubusercontent.com/u/61193321?s=460&u=7389af39e9b0236cb9ee8cdba6508afa90dcb9ff&v=4" type="image/x-icon">
+<title>Wagni | American/British English Translator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../public/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://www.pngitem.com/pimgs/m/244-2449426_american-english-germany-and-us-flag-hd-png.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-adn w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#app" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>APP</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>AUTHOR</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#app" class="w3-bar-item w3-button" style="width:25% !important">APP</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">AUTHOR</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">American / British English Translator</span></h1>
+    
+    <img src="https://www.pngitem.com/pimgs/m/244-2449426_american-english-germany-and-us-flag-hd-png.png" alt="flags" class="w3-image" width="580" height="10">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">About this APP</h2>
+    <hr style="width:225px" class="w3-opacity">
+    <p>
+      <ol>
+        <li style="font-size:20px">
+          <b>If you don't have a response when translating change your translation choice (American / British  or  British / American).</b>
+        </li>
+        <li>
+          I can enter a simple sentence into the text area and select whether to translate to British or American 
+          English from the dropdown menu.
+        </li>
+        <li>
+          When the "Translate" button is pressed, append the translated sentence to the <code>translated-sentence</code> 
+          <code>div</code>. See the JavaScript files in <code>/public</code> for the different spelling and terms your 
+          application should translate.
+        </li>
+        <li>
+          Your application should handle the way time is written in American and British English. For example, ten thirty 
+          is written as "10.30" in British English and "10:30" in American English.
+        </li>
+        <li>
+          Your application should also handle the way titles/honorifics are abbreviated in American and British English. 
+          For example, Doctor Wright is abbreviated as "Dr Wright" in British English and "Dr. Wright" in American English. 
+          See <code>/public/american-to-british-titles.js</code> for the different titles your application should handle.
+        </li>
+        <li>
+          Wrap any translated spelling or terms with <code>&lt;span class=&quot;highlight&quot;&gt;...&lt;/span&gt;</code> 
+          tags so they appear in green.
+        </li>
+        <li>
+          If the sentence in the text area has no spelling or terms that should be translated, append the message "Everything 
+          looks good to me!" to the <code>translated-sentence</code> <code>div</code>.
+        </li>
+        <li>
+          If there is no text in the text area, append the message "Error: No text to translate." to the <code>error-msg</code> 
+          <code>div</code> so the text appears in red.
+        </li>
+        <li>
+          I can press the "Clear Input" button to remove all text from the text area and the <code>translated-sentence</code> 
+          <code>div</code>.
+        </li>
+        <li>
+          All 20 unit tests are complete and passing. See <code>/tests/1_unit-tests.js</code> for the sentences you should 
+          write tests for.
+        </li>
+        <li>
+          All 4 functional tests are complete and passing. See <code>/tests/2_functional-tests.js</code> for the functionality 
+          you should write tests for.
+        </li>
+      </ol>
+    </p>
+  <!-- End About Section -->
+  </div>
+  
+  
+  <!-- App Section -->
+  <div class="w3-padding-64 w3-content" id="app">
+    <h2 class="w3-text-light-grey">APP</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for app -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+          <div class="form-container">
+            <textarea
+            rows="10"
+            cols="60"
+            id="text-input"
+            placeholder="Type your word here..."
+          ></textarea>
+          <br />
+          <select id="locale-select">
+            <option value="american-to-british">American to British</option>
+            <option value="british-to-american">British to American</option>
+          </select>
+          <input type="button" value="Translate" id="translate-btn" />
+          <input type="button" value="Clear" id="clear-btn" />
+        </div>
+      </div>
+
+      <div class="w3-half">
+          <div id="output-container" style="margin-left: 10px;">
+          <div id="solution-container">
+            Translated Sentence: <br/><br/>
+            <div id="translated-sentence"></div>
+            <div id="error-msg"></div>
+          </div>
+        </div>
+      </div>
+    <!-- End app grid -->
+    </div>
+  <!-- End app Section -->
+  </div>
+
+    
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge" id="contact">
+    <p class="w3-medium">Powered by <a href="https://www.linkedin.com/in/fredoly-wagni-42050a182/" target="_blank" class="w3-hover-text-green">WAGNI FREDOLY</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+<script src="../public/translator.js" type="module"></script>
+</html>
